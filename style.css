@@ -1,0 +1,273 @@
+.body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(149, 151, 152);
+}
+.head {
+    background-color: rgb(59, 61, 62);
+    padding: 20px;
+    text-align: center;
+    font-family: cursive;
+}
+header {
+    text-align: center;
+    padding: 20px 13px;
+    background: linear-gradient(to right, #222, #555);
+    color: white;
+}
+
+.h1 {
+    font-size: 50px;
+    margin-bottom: 7px;
+    padding: 30px;
+    color: rgb(59, 4, 4);
+    font-family: cursive;
+}
+
+.p {
+    font-size: 25px;
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: rgb(149, 151, 152);
+    font-family: cursive;
+
+}
+
+button {
+    font-size: 17px;
+    padding: 10px;
+    margin: 20px;
+    background-color: rgb(59, 61, 62);
+    color: rgb(121, 174, 111);
+    border-radius: 15px;
+    font-family: cursive;
+
+}
+
+button:hover {
+    background-color: rgb(121, 174, 111);
+    color:  rgb(59, 61, 62);
+    transform: scale(1.1);
+
+}
+#login {
+    background-color: rgb(59, 61, 62);
+    color: rgb(121, 174, 111);
+    border-radius: 15px;
+    font-family: cursive;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+}
+#login:hover {
+    background-color: rgb(121, 174, 111);
+    color: rgb(59, 61, 62);
+    transform: scale(1.1);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+}
+.content {
+    width: 70%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(23, 23, 23);;
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+}
+.menu a {
+    color: rgb(255, 255, 255);
+    margin-left: 15px;
+    text-decoration: none;
+}
+main {
+    display: flex;        
+    align-items: flex-start; 
+    gap: 20px;           
+}
+
+
+.sidebar {
+    width: 30%;           
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    position: sticky;     
+    top: 20px;           
+}
+.roadmap {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.roadmap h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.step {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+}
+
+.step h3 {
+    margin-bottom: 10px;
+    color: #222;
+}
+.contact {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #222;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #555;
+}
+
+.contact-info {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.contact-info a {
+    color: #222;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.lesson-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.lesson-card:hover {
+    transform: translateY(-5px);
+}
+
+.lesson-card h3 {
+    margin-bottom: 10px;
+    color: #222;
+}
+
+pre {
+    background: #222;
+    color: rgba(145, 255, 0, 0.607);
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 14px;
+}
+
+.lesson-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.lesson-card:hover {
+    transform: translateY(-5px);
+}
+.container {
+  display: flex;
+  align-items: flex-start; 
+  gap: 20px;
+}
+
+.container img {
+  width: 250px;
+  border-radius: 10px;
+  margin-left: auto; 
+}
+
+.text {
+  max-width: 500px;
+}
+.lesson-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 200px;
+    margin-right: auto;
+}
+.back-btn {
+            float: right;
+            padding: 10px 25px;
+            background: #2d3436;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+.back-btn:hover {
+    background: #00b894;
+}

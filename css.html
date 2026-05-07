@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackNest - CSS Dərsi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Naviqasiya */
+        header {
+            background: #1a1a1a;
+            padding: 15px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(23, 23, 23);;
+            color: rgb(255, 255, 255);
+            padding: 10px 15px;
+        }
+        .menu a {
+            color: rgb(255, 255, 255);
+            margin-left: 15px;
+            text-decoration: none;
+        }
+
+        /* Ana Konteyner */
+        .container {
+            max-width: 850px;
+            margin: 30px auto;
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+        }
+
+        .intro {
+            margin-bottom: 25px;
+            color: #576574;
+        }
+
+        /* CSS Struktur Şəkli */
+        .image-box {
+            text-align: center;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+        }
+
+        .image-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* Kartlar */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .card {
+            background: #f1f9ff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #d6eaf8;
+        }
+
+        .card strong {
+            display: block;
+            color: #2980b9;
+            margin-bottom: 5px;
+        }
+
+        /* Kod Bloku */
+        .code-area {
+            background: #2d3436;
+            color: #f1f2f6;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .s { color: #55efc4; } /* Selector */
+        .p { color: #81ecec; } /* Property */
+        .v { color: #ffeaa7; } /* Value */
+
+        .back-link {
+            float: right;
+            background: #2d3436;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            background: #3498db;
+        }
+
+        @media (max-width: 600px) {
+            .container { margin: 10px; padding: 20px; }
+            header { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+         <nav>
+        <div class="logo">BackNest</div>
+        <div class="menu">
+            <a href="index.html">Ana səhifə</a>
+            <a href="roadmap.html">Yol xəritəsi</a>
+            <a href="contact.html">Əlaqə</a>
+            <a href="login.html">Qeydiyyat</a>
+            <a href="cat.html">Qiymətləndirmə</a>
+        </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>CSS Nədir?</h1>
+        
+        <p class="intro">
+            <strong>CSS (Cascading Style Sheets)</strong> — HTML elementlərinin ekranda necə görünəcəyini təyin edən dildir. Rənglər, şriftlər və dizayn CSS vasitəsilə idarə olunur.
+        </p>
+
+        <div class="image-box">
+            <h3>CSS Sintaksisi</h3>
+            <img src="https://www.w3schools.com/css/selector.gif" alt="CSS Struktur">
+        </div>
+
+        <div class="grid-cards">
+            <div class="card">
+                <strong>Rənglər</strong>
+                Yazı və fon rənglərini təyin edir.
+            </div>
+            <div class="card">
+                <strong>Ölçülər</strong>
+                Elementlərin hündürlük və enini nizamlayır.
+            </div>
+        </div>
+
+        <h2>Kod Nümunəsi</h2>
+        <div class="code-area">
+<pre>
+<span class="s">body</span> {
+    <span class="p">background-color</span>: <span class="v">white</span>;
+    <span class="p">color</span>: <span class="v">black</span>;
+}
+
+<span class="s">.header</span> {
+    <span class="p">font-size</span>: <span class="v">20px</span>;
+    <span class="p">text-align</span>: <span class="v">center</span>;
+}
+</pre>
+        </div>
+
+        <a href="fr.html" class="back-link">Geri</a>
+        <div style="clear: both;"></div>
+    </div>
+
+</body>
+</html>

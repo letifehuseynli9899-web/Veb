@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackNest - Frontend Dünyası</title>
+    
+    <style>
+        /* --- CSS KODLARI BURA DAXİLDİR --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #fdfdfd;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Naviqasiya Menyusu */
+        header {
+            background: #1a1a1a;
+            padding: 20px 10%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+
+        /* Hero Section - Əsas Hissə */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 10%;
+            min-height: calc(100vh - 80px);
+            background: radial-gradient(circle at top right, #f0fdf4, #ffffff);
+        }
+
+        .hero-content {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.8rem;
+            color: #2d3436;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #636e72;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            max-width: 550px;
+        }
+
+        /* Düymələr */
+        .skills-wrapper {
+            display: flex;
+            gap: 15px;
+        }
+
+        .skill-btn {
+            padding: 14px 28px;
+            background: #2d3436;
+            color: white;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(23, 23, 23);;
+            color: rgb(255, 255, 255);
+            padding: 10px 15px;
+        }
+        .menu a {
+            color: rgb(255, 255, 255);
+            margin-left: 15px;
+            text-decoration: none;
+        }
+
+        .skill-btn:hover {
+            background: #00b894;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 184, 148, 0.3);
+        }
+
+        /* Şəkil və Animasiya */
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-image img {
+            max-width: 110%;
+            height: auto;
+            filter: drop-shadow(0 20px 50px rgba(0,0,0,0.1));
+            animation: floating 5s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Mobil Versiya (Responsive) */
+        @media (max-width: 992px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 60px 5%;
+            }
+            .hero-content {
+                padding-right: 0;
+                margin-bottom: 50px;
+            }
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+            .skills-wrapper {
+                justify-content: center;
+            }
+            .hero-image img {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+        <div class="logo">BackNest</div>
+        <div class="menu">
+            <a href="index.html">Ana səhifə</a>
+            <a href="roadmap.html">Yol xəritəsi</a>
+            <a href="contact.html">Əlaqə</a>
+            <a href="login.html">Qeydiyyat</a>
+            <a href="cat.html">Qiymətləndirmə</a>
+        </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Frontend Dünyası</h1>
+            <p>Veb saytların istifadəçiyə göründüyü sehrli dünyanı bizimlə kəşf edin. Müasir texnologiyalarla peşəkar bir gələcək qurun.</p>
+            
+            <div class="skills-wrapper">
+                <a href="html.html" class="skill-btn">HTML</a>
+                <a href="css.html" class="skill-btn">CSS</a>
+                <a href="javascript.html" class="skill-btn">JavaScript</a>
+            </div>
+        </div>
+        
+        <div class="hero-image">
+            <img src="https://blog.megaventory.com/wp-content/uploads/2022/09/Frontend-Intern-1024x1024.png" alt="Frontend Illustration">
+        </div>
+    </section>
+
+</body>
+</html>

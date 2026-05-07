@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackNest - HTML Dərsi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        header {
+            background: #1a1a1a;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(23, 23, 23);;
+            color: rgb(255, 255, 255);
+            padding: 10px 15px;
+        }
+        .menu a {
+            color: rgb(255, 255, 255);
+            margin-left: 15px;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Şəkli mərkəzləyən bölmə */
+        .visual-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .lesson-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .box-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .box-item {
+            background: #f0fdf4;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #00b894;
+            font-weight: 500;
+        }
+
+        .code-block {
+            background: #2d3436;
+            color: #fab1a0;
+            padding: 25px;
+            border-radius: 10px;
+            font-family: monospace;
+            margin: 25px 0;
+            overflow-x: auto;
+        }
+
+        .tag { color: #ff7675; }
+
+        .back-btn {
+            float: right;
+            padding: 10px 25px;
+            background: #2d3436;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #00b894;
+        }
+
+        @media (max-width: 600px) {
+            .container { margin: 15px; padding: 20px; }
+            header { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">BackNest</div>
+        <nav>
+        <div class="menu">
+            <a href="index.html">Ana səhifə</a>
+            <a href="roadmap.html">Yol xəritəsi</a>
+            <a href="contact.html">Əlaqə</a>
+            <a href="login.html">Qeydiyyat</a>
+            <a href="cat.html">Qiymətləndirmə</a>
+        </div>
+    </nav>
+    </header>
+
+    <div class="container">
+        <h1>HTML - HyperText Markup Language</h1>
+        
+        <p class="intro">
+            <strong>HTML</strong> veb səhifələrin əsas quruluşunu yaradan işarələmə dilidir. Bu dil vasitəsilə səhifənin başlıqları, abzasları, şəkilləri və digər elementləri təşkil edilir.
+        </p>
+
+        <div class="visual-section">
+            <h3>DOM Struktur Ağacı</h3>
+            <img src="https://cs.lmu.edu/~ray/images/firsthtmldom.png" alt="HTML DOM" class="lesson-image">
+        </div>
+
+        <div class="box-list">
+            <div class="box-item">Başlıqlar və abzaslar</div>
+            <div class="box-item">Şəkil və videolar</div>
+            <div class="box-item">Düymə və formalar</div>
+            <div class="box-item">Linklər və menyular</div>
+        </div>
+
+        <h2>Struktur Nümunəsi</h2>
+        <div class="code-block">
+            <pre>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+  <span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;title&gt;</span>Səhifə Başlığı<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;/head&gt;</span>
+  <span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>Xoş gəlmisiniz!<span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;p&gt;</span>Bu bir HTML abzasdır.<span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+            </pre>
+        </div>
+
+        <a href="fr.html" class="back-btn">Geri</a>
+        <div style="clear:both;"></div>
+    </div>
+
+</body>
+</html>

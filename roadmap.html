@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackNest - Yol Xəritəsi</title>
+    <style>
+        :root {
+            --primary: #2d3436;
+            --accent: #3498db;
+            --bg: #f9f9f9;
+            --white: #ffffff;
+            --text: #2d3436;
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+         header {
+            background: #1a1a1a;
+            padding: 15px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(23, 23, 23);;
+            color: rgb(255, 255, 255);
+            padding: 10px 15px;
+        }
+        .menu a {
+            color: rgb(255, 255, 255);
+            margin-left: 15px;
+            text-decoration: none;
+        }
+
+        /* Əsas Konteyner */
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .hero-section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .hero-section p {
+            color: #636e72;
+            font-size: 1.1rem;
+        }
+
+        /* Yol Xəritəsi Siyahısı */
+        .roadmap-list {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .roadmap-list::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #dfe6e9;
+        }
+
+        .step {
+            position: relative;
+            margin-bottom: 40px;
+            background: var(--white);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .step:hover {
+            transform: translateX(10px);
+        }
+
+        .step::before {
+            content: '';
+            position: absolute;
+            left: -39px;
+            top: 30px;
+            width: 16px;
+            height: 16px;
+            background: var(--accent);
+            border: 4px solid var(--white);
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #ebf5fb;
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .step h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .step ul {
+            list-style: none;
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .step ul li {
+            background: #f1f2f6;
+            padding: 5px 15px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: #576574;
+            border: 1px solid #e1e8ed;
+        }
+
+        /* Düymə */
+        .btn-footer {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 40px;
+        }
+
+        .back-link {
+            background: var(--primary);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            background: var(--accent);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        @media (max-width: 600px) {
+            header { padding: 1.5rem 5%; }
+            .hero-section h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+        <div class="logo">BackNest</div>
+        <div class="menu">
+            <a href="index.html">Ana səhifə</a>
+            <a href="roadmap.html">Yol xəritəsi</a>
+            <a href="contact.html">Əlaqə</a>
+            <a href="login.html">Qeydiyyat</a>
+            <a href="cat.html">Qiymətləndirmə</a>
+        </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="hero-section">
+            <h1>Frontend Yol Xəritəsi</h1>
+            <p>Sıfırdan peşəkar səviyyəyə qədər öyrənilməli olan texnologiyalar.</p>
+        </div>
+
+        <div class="roadmap-list">
+            
+            <div class="step">
+                <span class="step-number">Addım 1</span>
+                <h3>İnternet və Əsaslar</h3>
+                <p>Hər şeyin necə işlədiyini anlamaq təməl bilikdir.</p>
+                <ul>
+                    <li>HTTP / HTTPS</li>
+                    <li>DNS</li>
+                    <li>Domain & Hosting</li>
+                    <li>Brauzerlər necə işləyir?</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <span class="step-number">Addım 2</span>
+                <h3>HTML & CSS</h3>
+                <p>Səhifənin skeleti və xarici görünüşü üçün vacibdir.</p>
+                <ul>
+                    <li>Semantik HTML</li>
+                    <li>Flexbox & Grid</li>
+                    <li>Responsive Design</li>
+                    <li>CSS Animations</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <span class="step-number">Addım 3</span>
+                <h3>JavaScript (Baza)</h3>
+                <p>Veb səhifəyə "beyin" və interaktivlik qatan dil.</p>
+                <ul>
+                    <li>DOM Manipulyasiyası</li>
+                    <li>ES6+ Features</li>
+                    <li>Fetch API / Ajax</li>
+                    <li>Async/Await</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <span class="step-number">Addım 4</span>
+                <h3>Versiya İdarəetmə Sistemi</h3>
+                <p>Kodlarınızı qorumaq və komandada işləmək üçün.</p>
+                <ul>
+                    <li>Git Əsasları</li>
+                    <li>GitHub / GitLab</li>
+                    <li>Branching Strategies</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <span class="step-number">Addım 5</span>
+                <h3>Framework-lər</h3>
+                <p>Müasir iş dünyasında ən çox tələb olunan kitabxanalar.</p>
+                <ul>
+                    <li>React.js</li>
+                    <li>Vue.js və ya Angular</li>
+                    <li>Next.js (SSR)</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="btn-footer">
+            <a href="index.html" class="back-link">Geri qayıt</a>
+        </div>
+    </div>
+
+</body>
+</html>

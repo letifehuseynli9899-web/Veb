@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Platforması</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #ffffff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+        /* Əsas məzmunu mərkəzə gətirən hissə */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+        }
+
+        h1 span {
+            color: #38bdf8;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background-color: #38bdf8;
+            color: #0f172a;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0ea5e9;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-links">
+           <a href="index.html">Ana səhifə</a>
+           <a href="roadmap.html">Yol xəritəsi</a>
+           <a href="contact.html">Əlaqə</a>
+           <a href="login.html">Qeydiyyat</a>
+           <a href="cat.html">Qiymətləndirmə</a>
+        </div>
+    </nav>
+
+    <main>
+        <h1><span>Frontend</span> Dünyası</h1>
+        <p>Veb proqramlaşdırmanın vizual tərəfini bizimlə öyrənin. Sadə, effektiv və müasir yanaşma.</p>
+        <a href="fr.html" class="btn">Başlamaq üçün toxun</a>
+    </main>
+    
+
+</body>
+</html>
