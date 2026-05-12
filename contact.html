@@ -1,40 +1,272 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="az">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Əlaqə | BackNest</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        /* Ümumi tənzimləmələr */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+        }
+
+        body {
+            /* Sənin istədiyin rəngi bütün fon etdim */
+            background-color: rgb(158, 211, 220);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Naviqasiya Menyusu */
+        header {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            width: 100%;
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #fff;
+            margin-left: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+
+        .menu a:hover {
+            opacity: 0.7;
+        }
+
+        /* Əlaqə Seksiyası */
+        .contact {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .contact-card {
+            background: #ffffff;
+            width: 100%;
+            max-width: 600px;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact h2 {
+            text-align: left;
+            margin-bottom: 5px;
+            color: #2d3748;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .contact p.subtitle {
+            text-align: left;
+            color: #718096;
+            margin-bottom: 30px;
+            font-size: 15px;
+        }
+
+        /* Forma dizaynı */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: none; /* Dizaynı daha sadə saxlamaq üçün gizlətdim, placeholder kifayətdir */
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #edf2f7;
+            border-radius: 12px;
+            font-size: 15px;
+            outline: none;
+            background: #f8fafc;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            border-color: rgb(158, 211, 220);
+            background: #fff;
+            box-shadow: 0 0 10px rgba(158, 211, 220, 0.2);
+        }
+
+        textarea {
+            height: 120px;
+            resize: none;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: rgb(158, 211, 220);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            filter: brightness(0.9);
+            transform: translateY(-2px);
+        }
+
+        /* Alt Məlumatlar */
+        .info-section {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-top: 1px solid #edf2f7;
+            padding-top: 25px;
+        }
+
+        .info-box h4, .social-box h4 {
+            font-size: 14px;
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .info-box p {
+            font-size: 14px;
+            color: #4a5568;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-box i {
+            color: rgb(158, 211, 220);
+        }
+
+        .social-media {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-media a {
+            text-decoration: none;
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .social-media a:hover {
+            transform: scale(1.2);
+        }
+
+        .fa-instagram { color: #E1306C; }
+        .fa-linkedin { color: #0077b5; }
+
+        /* Mobil üçün */
+        @media (max-width: 600px) {
+            .input-row { grid-template-columns: 1fr; }
+            .info-section { flex-direction: column; gap: 20px; }
+            .contact-card { padding: 25px; }
+        }
+    </style>
 </head>
 <body>
-    <link rel="stylesheet" href="style.css">
+    <header>
+        <nav>
+        <div class="logo">BackNest</div>
+        <div class="menu">
+                <a href="{{ url_for('index') if url_for is defined else 'index.html' }}">Ana səhifə</a>
+
+                <a href="{{ url_for('roadmap') if url_for is defined else 'roadmap.html' }}">Yol xəritəsi</a>
+
+                <a href="{{ url_for('contact') if url_for is defined else 'contact.html' }}">Əlaqə</a>
+
+                <a href="{{ url_for('login') if url_for is defined else 'login.html' }}">Qeydiyyat</a>
+
+                <a href="{{ url_for('cat') if url_for is defined else 'cat.html' }}">Qiymətləndirmə</a>
+            </div>
+        </nav>
+    </header>
+
     <section class="contact">
-    <h2>Bizimlə Əlaqə</h2>
-    <p>Suallarınız, təklifləriniz və ya rəyinizi buradan bizə göndərə bilərsiniz.</p>
+        <div class="contact-card">
+            <h2>Bizimlə Əlaqə</h2>
+            <p class="subtitle">Suallarınız üçün bizə mesaj göndərməkdən çəkinməyin.</p>
 
-    <form action="#" method="post">
-        <label for="name">Adınız:</label>
-        <input type="text" id="name" name="name" placeholder="Adınızı yazın" required>
+            <form action="#" method="post">
+                <div class="input-row">
+                    <input type="text" id="name" name="name" placeholder="Adınız" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Emailinizi yazın" required>
+                <input type="text" id="subject" name="subject" placeholder="Mövzu" style="margin-bottom: 20px;">
 
-        <label for="subject">Mövzu:</label>
-        <input type="text" id="subject" name="subject" placeholder="Mövzunu yazın">
+                <textarea id="message" name="message" placeholder="Mesajınız..." required></textarea>
 
-        <label for="message">Mesajınız:</label>
-        <textarea id="message" name="message" placeholder="Mesajınızı yazın" required></textarea>
+                <button type="submit">Göndər</button>
+            </form>
 
-        <button type="submit">Göndər</button>
-    </form>
+            <div class="info-section">
+                <div class="info-box">
+                    <h4>Əlaqə Məlumatları</h4>
+                    <p><i class="fa-solid fa-envelope"></i> latifahuseynli99@gmail.com</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Bakı, Azərbaycan</p>
+                </div>
+                
+                <div class="social-box">
+                    <h4>Sosial Media</h4>
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/latifahsyl" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a> 
+                        <a href="https://www.linkedin.com/in/latifa-huseynli-522b51392" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="contact-info">
-        <p>Email: latifahuseynli99@gmail.com</p>
-        <p>Ünvan: Bakı, Azərbaycan</p>
-        <p>Sosial Media:
-            <a href="https://www.instagram.com/latifahsyl?igsh=MWNqNGxzMHcxeHZxYw==">Instagram</a> 
-            <a href="https://www.linkedin.com/in/latifa-huseynli-522b51392">LinkedIn</a>
-        </p>
-    </div>
-</section>
 </body>
 </html>
